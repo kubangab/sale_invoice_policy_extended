@@ -8,7 +8,7 @@ class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     sale_invoice_policy_required = fields.Boolean(
-        help=_("This makes Invoice Policy required on Sale Orders")
+        help=_("This makes Invoice Policy required on Sale Orders"))
 
     @api.model
     def get_values(self):
