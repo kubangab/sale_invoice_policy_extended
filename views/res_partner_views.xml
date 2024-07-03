@@ -9,4 +9,13 @@
             </group>
         </field>
     </record>
+    <record id="action_set_default_invoice_policy" model="ir.actions.server">
+        <field name="name">Set Default Invoice Policy</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.set_default_invoice_policy()
+        </field>
+    </record>
 </odoo>
