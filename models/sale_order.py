@@ -9,7 +9,7 @@ class SaleOrder(models.Model):
 
     invoice_policy = fields.Selection(
         [("order", "Ordered quantities"), ("delivery", "Delivered quantities")],
-        readonly=True,
+        readonly=False,
         states={"draft": [("readonly", False)], "sent": [("readonly", False)]},
         help="Ordered Quantity: Invoice based on the quantity the customer "
         "ordered.\n"
