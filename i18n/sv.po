@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0+e-20240607\n"
+"Project-Id-Version: Odoo Server 17.0+e-20240713\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-03 19:46+0000\n"
-"PO-Revision-Date: 2024-07-03 21:46+0200\n"
+"POT-Creation-Date: 2024-07-17 06:04+0000\n"
+"PO-Revision-Date: 2024-07-17 08:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -35,11 +35,8 @@ msgid "Contact"
 msgstr "Kontakt"
 
 #. module: sale_invoice_policy
-#. odoo-python
-#: code:addons/sale_invoice_policy/models/res_partner.py:0
 #: model:ir.model.fields,field_description:sale_invoice_policy.field_res_partner__default_invoice_policy
 #: model:ir.model.fields,field_description:sale_invoice_policy.field_res_users__default_invoice_policy
-#, python-format
 msgid "Default Invoicing Policy"
 msgstr "Standardfaktureringspolicy"
 
@@ -80,11 +77,6 @@ msgid "Ordered quantities"
 msgstr "Beställda kvantiteter"
 
 #. module: sale_invoice_policy
-#: model_terms:ir.ui.view,arch_db:sale_invoice_policy.view_sales_config
-msgid "Sale Invoice Policy"
-msgstr "Försäljningsfaktureringspolicy"
-
-#. module: sale_invoice_policy
 #: model:ir.model.fields,field_description:sale_invoice_policy.field_res_config_settings__sale_invoice_policy_required
 msgid "Sale Invoice Policy Required"
 msgstr "Krav på försäljningsfaktureringspolicy"
@@ -105,19 +97,13 @@ msgid "Set Default Invoice Policy"
 msgstr "Ange standardfaktureringspolicy"
 
 #. module: sale_invoice_policy
-#. odoo-python
-#: code:addons/sale_invoice_policy/models/res_config_settings.py:0
 #: model:ir.model.fields,help:sale_invoice_policy.field_res_config_settings__sale_invoice_policy_required
-#, python-format
 msgid "This makes Invoice Policy required on Sale Orders"
 msgstr "Detta gör faktureringspolicy obligatorisk för försäljningsorder"
 
 #. module: sale_invoice_policy
-#. odoo-python
-#: code:addons/sale_invoice_policy/models/res_partner.py:0
 #: model:ir.model.fields,help:sale_invoice_policy.field_res_partner__default_invoice_policy
 #: model:ir.model.fields,help:sale_invoice_policy.field_res_users__default_invoice_policy
-#, python-format
 msgid "This will be the default invoicing policy for this partner when creating new sales orders."
 msgstr ""
 "Detta kommer att vara standardfaktureringspolicyn för denna partner när nya försäljningsorder skapas."

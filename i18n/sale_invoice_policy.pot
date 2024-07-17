@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -14,11 +14,30 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: sale_invoice_policy
+#. odoo-python
+#: code:addons/sale_invoice_policy/models/res_partner.py:0
+#, python-format
+msgid "%d partners have been updated with the default invoice policy (%s)."
+msgstr ""
+
+#. module: sale_invoice_policy
 #: model:ir.model,name:sale_invoice_policy.model_res_config_settings
 msgid "Config Settings"
 msgstr ""
 
 #. module: sale_invoice_policy
+#: model:ir.model,name:sale_invoice_policy.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sale_invoice_policy
+#: model:ir.model.fields,field_description:sale_invoice_policy.field_res_partner__default_invoice_policy
+#: model:ir.model.fields,field_description:sale_invoice_policy.field_res_users__default_invoice_policy
+msgid "Default Invoicing Policy"
+msgstr ""
+
+#. module: sale_invoice_policy
+#: model:ir.model.fields.selection,name:sale_invoice_policy.selection__res_partner__default_invoice_policy__delivery
 #: model:ir.model.fields.selection,name:sale_invoice_policy.selection__sale_order__invoice_policy__delivery
 msgid "Delivered quantities"
 msgstr ""
@@ -46,13 +65,9 @@ msgid ""
 msgstr ""
 
 #. module: sale_invoice_policy
+#: model:ir.model.fields.selection,name:sale_invoice_policy.selection__res_partner__default_invoice_policy__order
 #: model:ir.model.fields.selection,name:sale_invoice_policy.selection__sale_order__invoice_policy__order
 msgid "Ordered quantities"
-msgstr ""
-
-#. module: sale_invoice_policy
-#: model_terms:ir.ui.view,arch_db:sale_invoice_policy.view_sales_config
-msgid "Sale Invoice Policy"
 msgstr ""
 
 #. module: sale_invoice_policy
@@ -71,6 +86,24 @@ msgid "Sales Order Line"
 msgstr ""
 
 #. module: sale_invoice_policy
+#: model:ir.actions.server,name:sale_invoice_policy.action_set_default_invoice_policy
+msgid "Set Default Invoice Policy"
+msgstr ""
+
+#. module: sale_invoice_policy
 #: model:ir.model.fields,help:sale_invoice_policy.field_res_config_settings__sale_invoice_policy_required
 msgid "This makes Invoice Policy required on Sale Orders"
+msgstr ""
+
+#. module: sale_invoice_policy
+#: model:ir.model.fields,help:sale_invoice_policy.field_res_partner__default_invoice_policy
+#: model:ir.model.fields,help:sale_invoice_policy.field_res_users__default_invoice_policy
+msgid "This will be the default invoicing policy for this partner when creating new sales orders."
+msgstr ""
+
+#. module: sale_invoice_policy
+#. odoo-python
+#: code:addons/sale_invoice_policy/models/res_partner.py:0
+#, python-format
+msgid "Update Complete"
 msgstr ""

@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="account.view_partner_property_form"/>
         <field name="arch" type="xml">
             <group name="sale" position="inside">
-                <field name="default_invoice_policy" attrs="{'invisible': [('is_company', '=', False)]}"/>
+                <field name="default_invoice_policy" invisible="not is_company"/>
             </group>
         </field>
     </record>

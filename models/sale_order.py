@@ -11,11 +11,12 @@ class SaleOrder(models.Model):
         "Delivered Quantity: Invoiced based on the quantity the vendor "
         "delivered (time or deliveries).",
     )
+    
     invoice_policy_required = fields.Boolean(
         compute="_compute_invoice_policy_required",
-        default=lambda self: self.env["ir.default"]._get(
-            "res.config.settings", "sale_invoice_policy_required"
-        ),
+        default=lambda self: self.env["ir.config_parameter"].sudo().get_param(
+            "sale_invoice_policy.sale_invoice_policy_required", False
+     )
     )
 
     @api.model
