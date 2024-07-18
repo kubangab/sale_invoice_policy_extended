@@ -19,6 +19,21 @@ msgid "Config Settings"
 msgstr ""
 
 #. module: sale_invoice_policy
+#: model:ir.model,name:sale_invoice_policy.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sale_invoice_policy
+#. odoo-python
+#: code:addons/sale_invoice_policy/models/res_partner.py:0
+#: model:ir.model.fields,field_description:sale_invoice_policy.field_res_partner__default_invoice_policy
+#: model:ir.model.fields,field_description:sale_invoice_policy.field_res_users__default_invoice_policy
+#, python-format
+msgid "Default Invoicing Policy"
+msgstr ""
+
+#. module: sale_invoice_policy
+#: model:ir.model.fields.selection,name:sale_invoice_policy.selection__res_partner__default_invoice_policy__delivery
 #: model:ir.model.fields.selection,name:sale_invoice_policy.selection__sale_order__invoice_policy__delivery
 msgid "Delivered quantities"
 msgstr ""
@@ -44,8 +59,11 @@ msgid ""
 "Ordered Quantity: Invoice based on the quantity the customer ordered.\n"
 "Delivered Quantity: Invoiced based on the quantity the vendor delivered (time or deliveries)."
 msgstr ""
+""
+""
 
 #. module: sale_invoice_policy
+#: model:ir.model.fields.selection,name:sale_invoice_policy.selection__res_partner__default_invoice_policy__order
 #: model:ir.model.fields.selection,name:sale_invoice_policy.selection__sale_order__invoice_policy__order
 msgid "Ordered quantities"
 msgstr ""
@@ -71,6 +89,18 @@ msgid "Sales Order Line"
 msgstr ""
 
 #. module: sale_invoice_policy
+#. odoo-python
+#: code:addons/sale_invoice_policy/models/res_config_settings.py:0
 #: model:ir.model.fields,help:sale_invoice_policy.field_res_config_settings__sale_invoice_policy_required
+#, python-format
 msgid "This makes Invoice Policy required on Sale Orders"
+msgstr ""
+
+#. module: sale_invoice_policy
+#. odoo-python
+#: code:addons/sale_invoice_policy/models/res_partner.py:0
+#: model:ir.model.fields,help:sale_invoice_policy.field_res_partner__default_invoice_policy
+#: model:ir.model.fields,help:sale_invoice_policy.field_res_users__default_invoice_policy
+#, python-format
+msgid "This will be the default invoicing policy for this partner when creating new sales orders."
 msgstr ""

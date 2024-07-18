@@ -4,10 +4,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0"
+"Project-Id-Version: Odoo Server 16.0+e-20240701\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-07-03 21:46+0200\n"
-"Last-Translator: Lasse Larsson\n"
+"POT-Creation-Date: 2024-07-18 17:41+0000\n"
+"PO-Revision-Date: 2024-07-18 19:42+0200\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
@@ -15,13 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.4\n"
-
-#. module: sale_invoice_policy
-#. odoo-python
-#: code:addons/sale_invoice_policy/models/res_partner.py:0
-#, python-format
-msgid "%d partners have been updated with the default invoice policy (%s)."
-msgstr "%d-partners har uppdaterats med standardfakturapolicyn (%s)."
 
 #. module: sale_invoice_policy
 #: model:ir.model,name:sale_invoice_policy.model_res_config_settings
@@ -99,11 +93,6 @@ msgid "Sales Order Line"
 msgstr "Orderrad"
 
 #. module: sale_invoice_policy
-#: model:ir.actions.server,name:sale_invoice_policy.action_set_default_invoice_policy
-msgid "Set Default Invoice Policy"
-msgstr "Ange standardfaktureringspolicy"
-
-#. module: sale_invoice_policy
 #. odoo-python
 #: code:addons/sale_invoice_policy/models/res_config_settings.py:0
 #: model:ir.model.fields,help:sale_invoice_policy.field_res_config_settings__sale_invoice_policy_required
@@ -120,10 +109,3 @@ msgstr "Detta gör faktureringspolicy obligatorisk för försäljningsorder"
 msgid "This will be the default invoicing policy for this partner when creating new sales orders."
 msgstr ""
 "Detta kommer att vara standardfaktureringspolicyn för denna partner när nya försäljningsorder skapas."
-
-#. module: sale_invoice_policy
-#. odoo-python
-#: code:addons/sale_invoice_policy/models/res_partner.py:0
-#, python-format
-msgid "Update Complete"
-msgstr "Uppdateringen har slutförts"
