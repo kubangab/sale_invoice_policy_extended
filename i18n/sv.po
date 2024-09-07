@@ -48,7 +48,7 @@ msgstr "Levererade antal"
 
 #. module: sale_invoice_policy_extended
 #: model:ir.model.fields,help:sale_invoice_policy_extended.field_res_config_settings__sale_invoice_policy_required
-msgid "Detta gör faktureringspolicy obligatorisk för försäljningsorder"
+msgid "This makes Invoice Policy required on Sale Orders"
 msgstr "Detta gör faktureringspolicy obligatorisk för försäljningsorder"
 
 #. module: sale_invoice_policy_extended
