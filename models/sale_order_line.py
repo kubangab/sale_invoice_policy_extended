@@ -2,6 +2,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, fields, models
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 class SaleOrderLine(models.Model):
@@ -15,11 +18,19 @@ class SaleOrderLine(models.Model):
         "order_id.invoice_policy",
     )
     def _compute_qty_to_invoice(self):
+        for line in self:
+            _logger.info(f"Computing qty_to_invoice for line {line.id}")
+            _logger.info(f"Order invoice policy: {line.order_id.invoice_policy}")
+            _logger.info(f"Invoice policy required: {line.order_id.invoice_policy_required}")
+            _logger.info(f"Product type: {line.product_id.type}")
+
         other_lines = self.filtered(
             lambda l: l.product_id.type == "service"
             or not l.order_id.invoice_policy
-            or not l.order_id.invoice_policy_required
         )
+        _logger.info(f"Lines treated as 'other_lines': {other_lines.ids}")
+        _logger.info(f"Lines treated with custom logic: {(self - other_lines).ids}")
+
         super(SaleOrderLine, other_lines)._compute_qty_to_invoice()
         for line in self - other_lines:
             invoice_policy = line.order_id.invoice_policy
@@ -27,7 +38,8 @@ class SaleOrderLine(models.Model):
                 line.qty_to_invoice = line.product_uom_qty - line.qty_invoiced
             else:
                 line.qty_to_invoice = line.qty_delivered - line.qty_invoiced
-        return True
+            
+            _logger.info(f"Final qty_to_invoice for line {line.id}: {line.qty_to_invoice}")
 
     @api.depends(
         "state",

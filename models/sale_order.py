@@ -2,6 +2,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, fields, models, _
+import logging
+
+_logger = logging.getLogger(__name__)
 
 class SaleOrder(models.Model):
 
@@ -9,7 +12,7 @@ class SaleOrder(models.Model):
 
     invoice_policy = fields.Selection(
         [("order", "Ordered quantities"), ("delivery", "Delivered quantities")],
-        readonly=False,
+        readonly=True,
         states={"draft": [("readonly", False)], "sent": [("readonly", False)]},
         help="Ordered Quantity: Invoice based on the quantity the customer "
         "ordered.\n"
@@ -51,3 +54,9 @@ class SaleOrder(models.Model):
     def _onchange_partner_invoice_policy(self):
         if self.partner_id and self.partner_id.default_invoice_policy:
             self.invoice_policy = self.partner_id.default_invoice_policy
+
+    def write(self, vals):
+        if 'invoice_policy' in vals:
+            _logger.info(f"Updating invoice policy for order {self.name}")
+            _logger.info(f"New policy: {vals['invoice_policy']}")
+        return super().write(vals)
