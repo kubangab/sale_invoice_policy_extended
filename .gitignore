@@ -5,3 +5,4 @@ i18n/.DS_Store
 *.pot
 i18n/sale_invoice_policy.pot
 /.vscode
+.DS_Store
